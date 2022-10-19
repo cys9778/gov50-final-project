@@ -1,7 +1,7 @@
 ---
 title: "Gov 50 Final Project"
-author: "Your Name Here"
-description: "My final project"
+author: Christopher Shen
+description: "My Final Project"
 output:
   distill::distill_article:
     self_contained: false
@@ -9,6 +9,6 @@ output:
 
 
 
-## Project thoughts
+## Project Thoughts
 
-I am interested in exploring data related to...
+I am interested in exploring data related to financial status and political affiliation. I wish to explore the how individuals of different financial backgrounds, income and savings amounts, tax brackets, etc., vote during federal and state candidate races. Is there a correlation between the two variables? I'm looking forward to diving deeper into the data.
