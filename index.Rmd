@@ -17,5 +17,38 @@ I am interested in exploring data related to income inequality and hate crimes. 
 
 Does greater income inequality lead to more hate crimes? In this study, I plan to examine the extent to which income inequality fuels hate crimes. I hypothesize that income inequality leads to division along institutional and financial resources, creating future fractures regarding political views. Such views can incite prejudices against certain groups of people, lighting the flame for hate crimes. Further, those who sit high on the socioeconomic ladder naturally look down upon those below them — this internalized hierarchical perspective can encourage harmful prejudices and kindle hate crimes. My sample is comprised of data regarding median household income, unemployment proportion, education level, and more, from all 52 states in 2016. My explanatory variable is the median household income level of each state. My outcome variables are the average hate crimes of a population of 100,00 people of each state. If I observe a greater difference of median household income in certain states that lead to more hate crimes, that would support my hypothesis. When I run my regression of the number of hate crimes, a positive, significant coefficient would indicate support for my hypothesis.
 
+## Data Visualization #1
 
+```{r, echo = FALSE}
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+hate <- read.csv("hate-crime-data.csv")
+
+med_income_point <- hate |>
+  ggplot(mapping = aes(x = median_household_income, y = hate_crimes_per_100k_splc)) +
+  geom_point(color = "indianred") +
+  geom_smooth() +
+  labs(
+    x = "Median Household Income",
+    y = "Hate Crimes per 100k Population"
+  )
+med_income_point
+
+```
+The following visualization denotes the relationship between median household income and number of hate crimes per 100k population.
+
+
+
+```{r, echo = FALSE}
+high_median <- hate |>
+  mutate(wealthy = case_when(
+    median_household_income >= 0 & median_household_income <= 45000 ~ "Low Wealth",
+    median_household_income > 45000 & median_household_income <= 60000 ~ "Medium Wealth",
+    median_household_income > 60000 ~ "High Wealth"
+  )) |>
+  group_by(wealthy) |>
+  summarize(mean_house_hate = mean(hate_crimes_per_100k_splc, na.rm = TRUE)) |>
+  pivot_wider(names_from = wealthy, values_from = mean_house_hate)
+```
 
