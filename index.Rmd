@@ -36,7 +36,7 @@ med_income_point <- hate |>
 med_income_point
 
 ```
-The following visualization denotes the relationship between median household income and number of hate crimes per 100k population.
+The above visualization denotes the relationship between median household income and number of hate crimes per 100k population.
 
 
 
