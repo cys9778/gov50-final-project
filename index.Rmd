@@ -43,7 +43,7 @@ fit <- lm(hate_crimes_per_100k_splc ~ median_household_income, data = hate)
 fit
 ```
 
-The results of this analysis tell us that on average, a one unit increase in median household income is associated with a **9.576e^-06 increase** in hate crimes. 
+The results of this analysis tell us that on average, a one unit increase in median household income is associated with a **9.576e^-06 increase** in hate crimes. The intercept doesn't give us much meaningful information because its highly unlikely for a state to have a median household income level of zero, and a negative hate crime rate doesn't mean anything logically. So far, this relationship has been surprising, since in my initial proposal, I assumed there to be a negative relationship, but that doesn't seem to be the case here.
 
 ```{r, echo = FALSE}
 high_median <- hate |>
