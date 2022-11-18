@@ -1520,16 +1520,27 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h2 id="project-thoughts">Project Thoughts</h2>
 <p>I am interested in exploring data related to income inequality and hate crimes. I wish to examine how individuals of different financial backgrounds, income and savings amounts, tax brackets, etc., contribute to the existence of hate crimes in the US. Particularly with the rise in Asian Hate crimes because of COVID-19, I believe this question is quite relevant. Is there a correlation between the two variables? I’m looking forward to diving deeper into the data.</p>
 <h2 id="proposal">Proposal</h2>
-<p>Does greater income inequality lead to more hate crimes? In this study, I plan to examine the extent to which income inequality fuels hate crimes. I hypothesize that income inequality leads to division along institutional and financial resources, creating future fractures regarding political views. Such views can incite prejudices against certain groups of people, lighting the flame for hate crimes. Further, those who sit high on the socioeconomic ladder naturally look down upon those below them — this internalized hierarchical perspective can encourage harmful prejudices and kindle hate crimes. My sample is comprised of data regarding median household income, unemployment proportion, education level, and more, from all 52 states in 2016. My explanatory variable is the median household income level of each state. My outcome variables are the average hate crimes of a population of 100,00 people of each state. If I observe a greater difference of median household income in certain states that lead to more hate crimes, that would support my hypothesis. When I run my regression of the number of hate crimes, a positive, significant coefficient would indicate support for my hypothesis.</p>
+<p>Do states with higher income levels lead to lower hate crimes? In this study, I plan to examine the extent to which income level fuels hate crimes. I hypothesize that differences in income levels lead to inequality along institutional and financial resources, creating future fractures regarding political views. Such views can incite prejudices against certain groups of people, lighting the flame for hate crimes. Further, those who sit high on the socioeconomic ladder naturally look down upon those below them — this internalized hierarchical perspective can encourage harmful prejudices and kindle hate crimes. My sample is comprised of data regarding median household income, unemployment proportion, education level, and more, from all 52 states in 2016. My explanatory variable is the median household income level of each state. My outcome variables are the average hate crimes of a population of 100,00 people of each state. If I observe states with a greater median household income level in certain states that lead to less hate crimes, that would support my hypothesis. When I run my regression of the number of hate crimes, a negative, significant coefficient would indicate support for my hypothesis.</p>
 <h2 id="data-visualization-1">Data Visualization #1</h2>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="index_files/figure-html5/unnamed-chunk-1-1.png" width="624" /></p>
 </div>
 <p>The above visualization denotes the relationship between median household income and number of hate crimes per 100k population.</p>
 <div class="layout-chunk" data-layout="l-body">
+<pre><code>
+Call:
+lm(formula = hate_crimes_per_100k_splc ~ median_household_income, 
+    data = hate)
+
+Coefficients:
+            (Intercept)  median_household_income  
+             -2.207e-01                9.576e-06  </code></pre>
+</div>
+<p>The results of this analysis tell us that on average, a one unit increase in median household income is associated with a <strong>9.576e^-06 increase</strong> in hate crimes.</p>
+<div class="layout-chunk" data-layout="l-body">
 
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
