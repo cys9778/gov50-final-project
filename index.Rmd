@@ -14,7 +14,7 @@ My sample is comprised of data regarding median household income, unemployment p
 
 ## Data, Research Design, and Dependent Variable
 
-As mentioned previously, my data is taken from 2015 and 2016 survey results by the Kaiser Family Foundation and its Census Bureau that measured each state's median household income, unemployment proportion, education level, share of voters who voted for Trump, and more. The data is also taken from the Southern Poverty Law Center, in which it measured the number of hate crimes per 100,000 population in each state. The values are summarized in a standard table. The research design was a **cross-sectional observational study** since the data regarding these variables was collected at one time across the sample populations. It is an observational study since the participants were not organized into control and treatment groups beforehand -- they were simply measured or recorded. The key dependent variable I'm examining is hate crimes per 100,000 population, labelled as *hate_crimes_per_100k_splc* in the dataset. The following plot represents the density distribution of the dependent variable:
+As mentioned previously, my data is taken from 2015 and 2016 survey results by the Kaiser Family Foundation and its Census Bureau that measured each state's hate crime rate per 100k population, median household income, unemployment proportion, education level, share of voters who voted for Trump, and more. The data is also taken from the Southern Poverty Law Center, in which it measured the number of hate crimes per 100,000 population in each state. The values are summarized in a standard table. The research design was a **cross-sectional observational study** since the data regarding these variables was collected at one time across the sample populations. It is an observational study since the participants were not organized into control and treatment groups beforehand -- they were simply measured or recorded. The key dependent variable I'm examining is hate crimes per 100,000 population, labelled as *hate_crimes_per_100k_splc* in the dataset. The following plot represents the density distribution of the dependent variable:
 
 ```{r, echo = FALSE}
 library(tidyverse)
@@ -31,6 +31,8 @@ ggplot(data = hate,
     y = "Density"
   )
 ```
+The distribution seems to be **right-skewed**, in which the majority of hate crimes per 100k population in 2016 exists between 0 and 0.5, when examining across almost all 50 states.
+
 ## Results
 
 # Scatterplot Visualization
