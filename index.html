@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["hate-crime-data.csv","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-1-1.png","index_files/header-attrs-2.16/header-attrs.js","index_files/header-attrs-2.17/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["hate-crime-data.csv","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-1-1.png","index_files/figure-html5/unnamed-chunk-2-1.png","index_files/header-attrs-2.16/header-attrs.js","index_files/header-attrs-2.17/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/kePrint-0.0.1/kePrint.js","index_files/lightable-0.0.1/lightable.css","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1473,6 +1473,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   <!--/radix_placeholder_distill-->
   <script src="index_files/header-attrs-2.16/header-attrs.js"></script>
+  <script src="index_files/kePrint-0.0.1/kePrint.js"></script>
+  <link href="index_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
   <script src="index_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="index_files/popper-2.6.0/popper.min.js"></script>
   <link href="index_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1517,15 +1519,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
-<h2 id="project-thoughts">Project Thoughts</h2>
-<p>I am interested in exploring data related to income inequality and hate crimes. I wish to examine how individuals of different financial backgrounds, income and savings amounts, tax brackets, etc., contribute to the existence of hate crimes in the US. Particularly with the rise in Asian Hate crimes because of COVID-19, I believe this question is quite relevant. Is there a correlation between the two variables? I’m looking forward to diving deeper into the data.</p>
-<h2 id="proposal">Proposal</h2>
-<p>Do states with higher income levels lead to lower hate crimes? In this study, I plan to examine the extent to which income level fuels hate crimes. I hypothesize that differences in income levels lead to inequality along institutional and financial resources, creating future fractures regarding political views. Such views can incite prejudices against certain groups of people, lighting the flame for hate crimes. Further, those who sit high on the socioeconomic ladder naturally look down upon those below them — this internalized hierarchical perspective can encourage harmful prejudices and kindle hate crimes. My sample is comprised of data regarding median household income, unemployment proportion, education level, and more, from all 52 states in 2016. My explanatory variable is the median household income level of each state. My outcome variables are the average hate crimes of a population of 100,00 people of each state. If I observe states with a greater median household income level in certain states that lead to less hate crimes, that would support my hypothesis. When I run my regression of the number of hate crimes, a negative, significant coefficient would indicate support for my hypothesis.</p>
-<h2 id="data-visualization-1">Data Visualization #1</h2>
+<h2 id="introduction">Introduction</h2>
+<p>Do states with higher income levels lead to lower hate crimes? In this study, I plan to examine the extent to which income level fuels hate crimes. I hypothesize that differences in income levels lead to inequality along institutional and financial resources, creating future fractures regarding political views. Such views can incite prejudices against certain groups of people, lighting the flame for hate crimes. Further, those who sit high on the socioeconomic ladder naturally look down upon those below them — this internalized hierarchical perspective can encourage harmful prejudices and kindle hate crimes.</p>
+<p>My sample is comprised of data regarding median household income, unemployment proportion, education level, and more, from all 50 states in 2015 and 2016. My explanatory variable is the median household income level of each state. My outcome variables are the average hate crimes of a population of 100,00 people of each state. States with greater median household income would suggest more robust allocation of financial resources to centers for education, social security, infrastructure, and more. Thus, if I observe states with a greater median household income level in certain states that lead to less hate crimes, that would support my hypothesis. When I run my regression of the number of hate crimes, a negative, significant coefficient would indicate support for my hypothesis.</p>
+<h2 id="data-research-design-and-dependent-variable">Data, Research Design, and Dependent Variable</h2>
+<p>As mentioned previously, my data is taken from 2015 and 2016 survey results by the Kaiser Family Foundation and its Census Bureau that measured each state’s median household income, unemployment proportion, education level, share of voters who voted for Trump, and more. The data is also taken from the Southern Poverty Law Center, in which it measured the number of hate crimes per 100,000 population in each state. The values are summarized in a standard table. The research design was a <strong>cross-sectional observational study</strong> since the data regarding these variables were collected at one time across the sample populations. It is an observational study since the participants were not organized into control and treatment groups beforehand – they were simply measured. The key dependent variable I’m examining is hate crimes per 100,000 population, labelled as <em>hate_crimes_per_100k_splc</em> in the dataset. The following plot represents the density distribution of the dependent variable:</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="index_files/figure-html5/unnamed-chunk-1-1.png" width="624" /></p>
 </div>
-<p>The above visualization denotes the relationship between median household income and number of hate crimes per 100k population.</p>
+<h2 id="results">Results</h2>
+<h1 id="scatterplot-visualization">Scatterplot Visualization</h1>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="index_files/figure-html5/unnamed-chunk-2-1.png" width="624" /></p>
+</div>
+<p>The above visualization denotes the relationship between median household income and number of hate crimes per 100k population. There seems to be a slight positive correlation between the independent and dependent variables. The following regressions dive deeper into the analysis:</p>
+<h1 id="primary-variable-regression">Primary Variable Regression</h1>
+<p>The following regression model reveals the relationship between median household income and hate crimes per 100k population.</p>
 <div class="layout-chunk" data-layout="l-body">
 <pre><code>
 Call:
@@ -1536,11 +1545,215 @@ Coefficients:
             (Intercept)  median_household_income  
              -2.207e-01                9.576e-06  </code></pre>
 </div>
-<p>The results of this analysis tell us that on average, a one unit increase in median household income is associated with a <strong>9.576e^-06 increase</strong> in hate crimes. The intercept doesn’t give us much meaningful information because its highly unlikely for a state to have a median household income level of zero, and a negative hate crime rate doesn’t mean anything logically. So far, this relationship has been surprising, since in my initial proposal, I assumed there to be a negative relationship, but that doesn’t seem to be the case here.</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:center;">
+Model 1
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:center;">
+−0.221
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+s.e. = 0.212
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+p = 0.303
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+median_household_income
+</td>
+<td style="text-align:center;">
+0.00001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+s.e. = 0.000004
+</td>
+</tr>
+<tr>
+<td style="text-align:left;box-shadow: 0px 1px">
+</td>
+<td style="text-align:center;box-shadow: 0px 1px">
+p = 0.016
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Num.Obs.
+</td>
+<td style="text-align:center;">
+47
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+R2
+</td>
+<td style="text-align:center;">
+0.123
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+R2 Adj.
+</td>
+<td style="text-align:center;">
+0.104
+</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>The results of this analysis tell us that on average, a one unit increase in median household income is associated with a <strong>9.576e^-06 increase</strong> in hate crimes. This indicates a very small positive correlation between the two variables. The intercept doesn’t give us much meaningful information because its highly unlikely for a state to have a median household income level of zero, and a negative hate crime rate doesn’t mean anything logically. In terms of <strong>statistical significance</strong>, the p-value of our independent variable is approximately <strong>0.016</strong>. At an alpha of 0.05, since the p-value is less than alpha, it seems to be <strong>statistically significant</strong>. At the same time, proving a causal relationship is mostly unlikely as there are too many confounding factors at play in this observational study. For example, the political party at the time as well as the shifting racial demographic of the state would influence the treatment group and therefore the results of the study as well. These are often key factors when determining hate crime rates. Thus, it <strong>cannot</strong> be said without further experimental results that greater median household income <em>causes</em> greater hate crimes per 100,000 population.</p>
+<h1 id="multivariable-regression">Multivariable Regression</h1>
+<p>The following multivariate regression demonstrates the relationship between median household income, proportion of unemployed, and hate crimes per 100k population.</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>
+Call:
+lm(formula = hate_crimes_per_100k_splc ~ median_household_income + 
+    share_unemployed_seasonal, data = hate)
+
+Coefficients:
+              (Intercept)    median_household_income  
+               -0.6425371                  0.0000118  
+share_unemployed_seasonal  
+                5.8929059  </code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:center;">
+Model 1
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:center;">
+−0.643
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+s.e. = 0.336
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+p = 0.063
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+median_household_income
+</td>
+<td style="text-align:center;">
+0.00001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+s.e. = 0.000004
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+p = 0.005
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+share_unemployed_seasonal
+</td>
+<td style="text-align:center;">
+5.893
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+s.e. = 3.688
+</td>
+</tr>
+<tr>
+<td style="text-align:left;box-shadow: 0px 1px">
+</td>
+<td style="text-align:center;box-shadow: 0px 1px">
+p = 0.117
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Num.Obs.
+</td>
+<td style="text-align:center;">
+47
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+R2
+</td>
+<td style="text-align:center;">
+0.171
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+R2 Adj.
+</td>
+<td style="text-align:center;">
+0.133
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The results of this analysis tell us that on average, a one unit increase in median household income is associated with an approximate <strong>0.000018 increase</strong> in hate crimes, after adjusting for the proportion of the population that is unemployed. This indicates a very small positive correlation between the variables. The p-value of this coefficient is <strong>0.005</strong>, suggesting that it <strong>is statistically significant</strong> at both the alpha = 0.05 and alpha = 0.01 level. A more interesting note is that on average, a one unit increase in the proportion of the population that is unemployed is associated with an approximate <strong>5.893 increase</strong> in hate crimes, after adjusting for median household income. While the value seems quite large, the p-value is 0.117, meaning that it is <strong>not statistically significant</strong> at either alpha = 0.05 or alpha = 0.01 levels. As mentioned above, it is difficult to prove a causal relationship for the <em>median household income</em> variable. At the same time, it is also difficult to prove a causal relationship between the <em>share_unemployed_seasonal</em> and <em>hate_crimes_per_199k_splc</em> variables. Due to the number of confounding factors, such as social welfare resources and demographic distribution, which would affect the treatment variable, the results of the study would vary if they were accounted for.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The aim of this study was to evaluate the extent to which income level and hate crime rates were related. Through analyzing variables such as median household income, education level, unemployment, and more of each state, the results of the data analysis were intriguing. To recap, there seems to be a <strong>very small positive correlation</strong> between median household income and hate crime rates per 100k population on average across all states, accounting for the proportion of unemployed individuals or not. The statistical significance of the coefficient at an alpha level of 0.05 <strong>held</strong> in both the singular and multivariable regression analysis.</p>
+<p>At the same time, there were a few limitations to the study. To start, while the primary year in which the key independent and dependent variables were measured was in 2016, some of the more peripheral variables were surveyed in 2015. During that period of time between 2015 and 2016, shifting demographics, political landscape, and financial situations would’ve impacted the results of the study and the relevant correlations. In other words, the analysis of <em>those</em> variables would be applying 2015 values to 2016 hate crime rates per 100k population. Moreover, information about how the data was surveyed is not provided. Assuming it was either surveyed or measured from other federal databases, ensuring that there is no selection bias among the respondents would be crucial. This includes surveying a random survey of all racial, gender, and financial status, and background demographics to get the most representative sample of the population.</p>
+<p>In the future, I would suggest collecting all the data for the study in one singular year, rather than split between two consecutive years, to decrease the number of confounding factors. Next, it would also be very informative to examine the trends found in the study across multiple years. For example, do these same correlations persist in 2017? How about 2019? 2022? Afterward, by compiling the analysis together, one could possibly begin to observe the <em>overall</em> moving trend regarding income and hate crimes in the United States.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
